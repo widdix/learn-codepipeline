@@ -60,7 +60,7 @@ git push deploy master
 
 ## Setup the global infrastructure for all labs
 
-** Typically done by the workshop instructor only. **
+**Typically the following steps are taken care of by the workshop instructor only.**
 
 Adjust cluster size according to number of workshop participants.
 

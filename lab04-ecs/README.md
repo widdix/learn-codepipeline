@@ -26,7 +26,7 @@ You need to extend the `pipeline.yml` template which already contains:
 
 1. The sample solution from Lab 02.
 1. The IAM role `ImageCodeBuildRole` which is needed for CodeBuild when building and publishing a Docker image.
-1. A `Production` stage with an empty action `Deploy`
+1. A `Production` stage with an empty action `Deploy` (search for `TODO`).
 
 To be able to deploy to ECS, you need to add the following parts to your deployment:
 

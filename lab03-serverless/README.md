@@ -23,7 +23,7 @@ The template `infrastructure/serverless.yml` contains the following resources an
 You need to extend the `pipeline.yml` template which already contains:
 
 1. The sample solution from Lab 02.
-1. A `Production` stage with two empty actions `CreateChangeSet` and `ApplyChangeSet`.
+1. A `Production` stage with two empty actions `CreateChangeSet` and `ApplyChangeSet` (search for `TODO`).
 
 For the first time you need to hand over results between different stages and actions of your pipeline. Doing so is possible with a `TemplateConfiguration`. You need to complete the file `infrastructure/serverless.json`.
 
