@@ -1,0 +1,11 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Pipeline'
+Parameters:
+  RepositoryName:
+    Type: String
+    Default: 'learn-codepipeline'
+  BranchName:
+    Type: String
+    Default: 'master'
+Resources:

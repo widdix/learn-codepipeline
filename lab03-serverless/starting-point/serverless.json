@@ -1,0 +1,7 @@
+{
+  "Parameters": {
+    "S3Bucket": // TODO
+    "S3Key": // TODO
+    "AdminEmail": // TODO
+  }
+}
