@@ -15,8 +15,6 @@ cp lab01-cloudformation/starting-point/pipeline.yml deploy/pipeline.yml
 Extend the CloudFormation template at `deploy/pipeline.yml` with the following resources.
 
 1. A S3 bucket to store pipeline artifacts.
-1. An IAM role for CodePipeline with managed policy `AdministratorAccess`.
-1. An IAM role for CloudFormation with managed policy `AdministratorAccess`.
 1. A CodePipeline with the following stages
     1. Source: Fetch source code from CodeCommit
     1. Pipeline: Deploy the CloudFormation template `deploy/pipeline.yml`.
@@ -40,28 +38,7 @@ This time your pipeline should succeed!
 ## Help
 
 * CloudFormation [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)
-* CloudFormation [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
 * CloudFormation [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
 * CodePipeline [Pipeline Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html)
 * CodePipeline [CloudFormation Action](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-action-reference.html)
 
-An assume role policy granting CodePipeline access to a role looks like this:
-
-```
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": [
-          "codepipeline.amazonaws.com"
-        ]
-      },
-      "Action": [
-        "sts:AssumeRole"
-      ]
-    }
-  ]
-}
-```
