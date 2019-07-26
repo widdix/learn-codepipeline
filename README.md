@@ -69,3 +69,7 @@ aws cloudformation create-stack --stack-name vpc-2azs --template-url https://s3-
 
 aws cloudformation create-stack --stack-name ecs-cluster --template-url https://s3-eu-west-1.amazonaws.com/widdix-aws-cf-templates-releases-eu-west-1/stable/ecs/cluster.yaml --parameters ParameterKey=ParentVPCStack,ParameterValue=vpc-2azs ParameterKey=InstanceType,ParameterValue=m5.large ParameterKey=MaxSize,ParameterValue=2 ParameterKey=MinSize,ParameterValue=2, ParameterKey=DesiredCapacity,ParameterValue=2 --capabilities CAPABILITY_IAM
 ```
+
+## More Labs
+
+We offer AWS workshops tailored to your needs. See [widdix/learn-*](https://github.com/widdix?q=learn-) for more labs.
