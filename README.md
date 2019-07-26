@@ -4,6 +4,8 @@ Labs helping you to learn AWS CodePipeline within a day. Labs are based on the [
 
 Are you looking for an instructor-led workshop based on these labs? Say [hello@widdix.net](mailto:hello@widdix.net).
 
+> Raise the VPCs per region limit if you run this lab with a larger group of people!
+
 ## Labs
 
 * [Lab 01: Deploying a CloudFormation template](lab01-cloudformation/)
