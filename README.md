@@ -61,6 +61,15 @@ Edit `.git/config` and add.
 git push deploy master
 ```
 
+## Clean up
+
+Make sure you are deleting all the resources created while going through the labs.
+
+* Delete the CodeCommit repository `learn-codepipeline-$user`.
+* Got to the CloudFormation stack `learn-codepipeline-$user` and note down the name of the S3 bucket with the logical ID `ArtifactsBucket`.
+* Delete the CloudFormation stack `learn-codepipeline-$user`.
+* Delete the S3 bucket you noted down before deleting the CloudFormation stack.
+
 ## Setup the global infrastructure for all labs
 
 > Setup the global infrastructure only once for all participants of the workshop.
