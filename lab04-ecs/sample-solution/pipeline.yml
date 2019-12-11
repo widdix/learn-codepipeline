@@ -161,8 +161,6 @@ Resources:
               commands:
               - 'cd app/ && npm install'
               - 'cd app/ && npm test'
-            post_build:
-              commands:
               - 'rm -rf app/node_modules/'
               - 'rm -rf app/test/'
               - 'cd app/ && npm install --production'
@@ -192,8 +190,6 @@ Resources:
               commands:
               - cp ${!CODEBUILD_SRC_DIR_Source}/infrastructure/Dockerfile .
               - 'docker build -f Dockerfile -t ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${ArtifactsRepository}:${!CODEBUILD_BUILD_ID#*:} .'
-            post_build:
-              commands:
               - 'eval $(aws ecr get-login --no-include-email) && docker push ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${ArtifactsRepository}:${!CODEBUILD_BUILD_ID#*:}'
               - 'echo "{\"image\": \"${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${ArtifactsRepository}:${!CODEBUILD_BUILD_ID#*:}\"}" > image.json'
           artifacts:
